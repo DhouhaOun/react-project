@@ -16,13 +16,7 @@
       "id": "3",
       "name": "Computer UY",
       "price": 6500,
-      "checked": true
-    },
-    {
-      "id": "5",
-      "name": "Computer",
-      "price": 6500,
-      "checked": true
+      "checked": false
     },
     {
       "name": "yyy",
@@ -75,6 +69,12 @@
     {
       "id": "1b0c",
       "name": "dddd",
+      "price": "88",
+      "check": true
+    },
+    {
+      "id": "966c",
+      "name": "cccc",
       "price": "88",
       "check": true
     }
