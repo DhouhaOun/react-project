@@ -6,8 +6,8 @@ export const productApi = axios.create({
 });
 
 // Fetch all products
-export const getProducts = () => {
-    return productApi.get("/products");
+export const getProducts = (keyword="",page=1, size=4) => {
+    return productApi.get(`/products?name_like=${keyword}&_page=${page}&_limit=${size}`);
 };
 
 // Delete a product by ID
