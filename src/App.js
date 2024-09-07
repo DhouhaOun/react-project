@@ -8,13 +8,18 @@ import NewProduct from './components/NewProduct';
 import { Link } from'react-router-dom';
 import { useEffect, useState } from 'react';
 
+import { AppContext, useAppState } from './app/app';
+
 function App() {
   const [currentRoute, setCurrentRoute] = useState();
   useEffect(() =>{
     const  path = window.location.pathname;
     setCurrentRoute(path.slice(0, path.length ));
   }, []);
+  const appState = useAppState();
   return (
+   
+    <AppContext.Provider value={appState}>
     <BrowserRouter>
       <nav className='m-1 p-1 border border-info'>
         <ul className='nav na-pills'>
@@ -30,6 +35,7 @@ function App() {
         <Route path="/NewProduct" element={<NewProduct />}></Route>
       </Routes>
     </BrowserRouter>
+    </AppContext.Provider>
   );
 }
 
